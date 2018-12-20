@@ -3403,10 +3403,10 @@
         <service android:name=".fuelgauge.batterytip.AnomalyDetectionJobService"
                  android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <!-- PixysSettings -->
+        <!-- NeoxSettings -->
         <activity android:name=".Settings$PixysSettingsActivity"
-            android:label="@string/pixys_settings_title"
-            android:icon="@drawable/ic_homepage_pixys"
+            android:label="@string/neox_settings_title"
+            android:icon="@drawable/ic_neox"
             android:taskAffinity="com.android.settings">
             <intent-filter android:priority="1">
                 <action android:name="com.pixys.settings.PixysSettings" />
@@ -3428,7 +3428,7 @@
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
                 android:value="true" />
             <meta-data android:name="com.android.settings.summary"
-                android:resource="@string/pixys_settings_summary"/>
+                android:resource="@string/neox_settings_summary"/>
         </activity>
 
         <!-- Heads up settings activity. -->

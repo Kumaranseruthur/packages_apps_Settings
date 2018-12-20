@@ -25,10 +25,6 @@
     <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
     <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
 
-    <!-- PixysOS OTA -->
-    <string name="pixys_title_ota">OTA Updates</string>
-    <string name="pixys_summary_ota">Check if there is any new release</string>
-
     <!--Miscellaneous-->
     <string name="misc_title">Miscellaneous</string>
     <string name="misc_settings_summary">Some random stuff that doesn\'t go in other options</string>
@@ -98,14 +94,8 @@
     <string name="screenshot_sound_title">Screenshot sound</string>
 
     <!-- Pixys Settings -->
-    <string name="pixys_settings_title">Buttons</string>
-    <string name="pixys_settings_summary">Additional settings for Buttons</string>
-
-    <!-- Changelog -->
-    <string name="changelog_title">Changelog</string>
-    <string name="changelog_summary">Recent Changes</string>
-    <string name="changelog_loading">Loading changelog\u2026</string>
-    <string name="changelog_error">Unable to load changelog</string>
+    <string name="neox_settings_title">NeoxLounge</string>
+    <string name="neox_settings_summary">Minimalist Customizations</string>
 
     <!-- Double Tap Lockscreen to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Double-tap on lockscreen to sleep</string>
