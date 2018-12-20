@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2018 AospExtended ROM Project
- * Copyright (C) 2018 PixysOS
+ * Copyright (C) 2018 NeoxROM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,16 +31,16 @@ import android.view.View;
 import com.android.settings.R;
 import com.android.settingslib.RestrictedLockUtils;
 
-public class PixysVersionDialogController  implements View.OnClickListener {
+public class NeoxVersionDialogController  implements View.OnClickListener {
 
     private static final String TAG = "ExtfirmwareDialogCtrl";
     private static final int DELAY_TIMER_MILLIS = 500;
     private static final int ACTIVITY_TRIGGER_COUNT = 3;
 
     @VisibleForTesting
-    static final int PIXYS_VERSION_VALUE_ID = R.id.pixys_version_value;
+    static final int NEOX_VERSION_VALUE_ID = R.id.neox_version_value;
     @VisibleForTesting
-    static final int PIXYS_VERSION_LABEL_ID = R.id.pixys_version_label;
+    static final int NEOX_VERSION_LABEL_ID = R.id.neox_version_label;
 
     private final FirmwareVersionDialogFragment mDialog;
     private final Context mContext;
@@ -50,7 +50,7 @@ public class PixysVersionDialogController  implements View.OnClickListener {
     private RestrictedLockUtils.EnforcedAdmin mFunDisallowedAdmin;
     private boolean mFunDisallowedBySystem;
 
-    public PixysVersionDialogController(FirmwareVersionDialogFragment dialog) {
+    public NeoxVersionDialogController(FirmwareVersionDialogFragment dialog) {
         mDialog = dialog;
         mContext = dialog.getContext();
         mUserManager = (UserManager) mContext.getSystemService(Context.USER_SERVICE);
@@ -88,13 +88,13 @@ public class PixysVersionDialogController  implements View.OnClickListener {
         initializeAdminPermissions();
         registerClickListeners();
 
-        mDialog.setText(PIXYS_VERSION_VALUE_ID,
-                BidiFormatter.getInstance().unicodeWrap(Build.PIXYS_DISPLAY_VERSION));
+        mDialog.setText(NEOX_VERSION_VALUE_ID,
+                BidiFormatter.getInstance().unicodeWrap(Build.NEOX_DISPLAY_VERSION));
     }
 
     private void registerClickListeners() {
-        mDialog.registerClickListener(PIXYS_VERSION_LABEL_ID, this /* listener */);
-        mDialog.registerClickListener(PIXYS_VERSION_VALUE_ID, this /* listener */);
+        mDialog.registerClickListener(NEOX_VERSION_LABEL_ID, this /* listener */);
+        mDialog.registerClickListener(NEOX_VERSION_VALUE_ID, this /* listener */);
     }
 
     /**

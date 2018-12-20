@@ -34,11 +34,11 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.core.lifecycle.LifecycleObserver;
 import com.android.settingslib.core.lifecycle.events.OnResume;
 
-public class PixysVersionPreferenceController extends AbstractPreferenceController implements
+public class NeoxVersionPreferenceController extends AbstractPreferenceController implements
         PreferenceControllerMixin, LifecycleObserver, OnResume {
 
-    private static final String TAG = "PixysVersionPref";
-    private static final String KEY_PIXYS_VERSION = "pixys_version";
+    private static final String TAG = "NeoxVersionPref";
+    private static final String KEY_NEOX_VERSION = "neox_version";
 
     private final UserManager mUserManager;
 
@@ -47,7 +47,7 @@ public class PixysVersionPreferenceController extends AbstractPreferenceControll
 
     private long[] mHits = new long[3];
 
-    public PixysVersionPreferenceController(Context context, Lifecycle lifecycle) {
+    public NeoxVersionPreferenceController(Context context, Lifecycle lifecycle) {
         super(context);
         mUserManager = (UserManager) context.getSystemService(Context.USER_SERVICE);
         if (lifecycle != null) {
@@ -65,13 +65,13 @@ public class PixysVersionPreferenceController extends AbstractPreferenceControll
         super.displayPreference(screen);
         final Preference pref = screen.findPreference(getPreferenceKey());
         if (pref != null) {
-            pref.setSummary(Build.PIXYS_DISPLAY_VERSION);
+            pref.setSummary(Build.NEOX_DISPLAY_VERSION);
         }
     }
 
     @Override
     public String getPreferenceKey() {
-        return KEY_PIXYS_VERSION;
+        return KEY_NEOX_VERSION;
     }
 
     @Override
@@ -84,7 +84,7 @@ public class PixysVersionPreferenceController extends AbstractPreferenceControll
 
     @Override
     public boolean handlePreferenceTreeClick(Preference preference) {
-        if (!TextUtils.equals(preference.getKey(), KEY_PIXYS_VERSION)) {
+        if (!TextUtils.equals(preference.getKey(), KEY_NEOX_VERSION)) {
             return false;
         }
         System.arraycopy(mHits, 1, mHits, 0, mHits.length - 1);

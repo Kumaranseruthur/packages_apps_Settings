@@ -21,14 +21,6 @@
     android:key="device_info_pref_screen"
     android:title="@string/about_settings">
 
-    <!-- Changelog -->
-    <Preference
-        android:key="changelog"
-        android:order="1"
-        android:title="@string/changelog_title"
-        android:summary="@string/changelog_summary"
-        android:fragment="com.android.settings.pixys.Changelog" />
-        
     <!-- Phone number -->
     <Preference
         android:key="phone_number"
@@ -68,21 +60,13 @@
         settings:keywords="@string/keywords_android_version"
         android:summary="@string/summary_placeholder"/>
 
-    <!-- PixysOS version --> 
+    <!-- NeoxROM version --> 
     <Preference 
-        android:key="pixys_version"
+        android:key="neox_version"
         android:order="32"
-        android:title="@string/pixys_version"
-        settings:keywords="@string/keywords_pixys_version"
-        android:summary="@string/pixys_version_default"/>
-
-    <!-- Build date -->
-    <Preference 
-       android:key="build_date"
-       android:order="33"
-       android:title="@string/build_date"
-       settings:keywords="@string/keywords_build_date"
-       android:summary="@string/build_date_default" />
+        android:title="@string/neox_version"
+        settings:keywords="@string/keywords_neox_version"
+        android:summary="@string/neox_version_default"/>
 
     <!--IP address -->
     <Preference
